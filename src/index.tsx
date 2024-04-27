@@ -15,13 +15,12 @@ import loreData from "./lore.json";
 export const app = new Frog({
     // Supply a Hub to enable frame verification.
     verify: "silent",
-    basePath: '/lore',
     // hub: neynar({ apiKey: NEYNAR_API_KEY }),
 })
 
 app.use('/*', serveStatic({root: './public'}))
 
-app.frame('/', (c) => {
+app.frame('/lore', (c) => {
     const {buttonValue,status} = c
 
     const lorePage = buttonValue ?
@@ -30,7 +29,7 @@ app.frame('/', (c) => {
 
     if (!lorePage) {
         return c.res({
-            action: '/',
+            action: '/lore',
             image: (<div> something went wrong! This is so broken!</div>),
             intents: [],
         })
@@ -65,7 +64,7 @@ app.frame('/', (c) => {
         }
 
         return c.res({
-            action: `/`,
+            action: `/lore`,
             image: (pageImageUrl),
             intents: [
                 status != 'response' && <Button value={latestPage.name}>Latest : {latestPage.name}</Button>,
