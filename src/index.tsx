@@ -38,7 +38,7 @@ app.frame('/', (c) => {
     else{
         const currentPageIndex = loreData.indexOf(lorePage)
         //the request's url + the lore page's image url
-        const pageImageUrl = `https://frames.chaincade.com/${lorePage.image}`
+        const pageImageUrl = `https://frames.chaincade.com${lorePage.image}`
 
         //find the lore page in the loreData array
         const index = loreData.indexOf(lorePage)
