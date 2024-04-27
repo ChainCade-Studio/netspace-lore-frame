@@ -1,0 +1,134 @@
+[
+  {
+    "id": 0,
+    "name": "Home",
+    "url": "/0",
+    "image": "/images/1.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Cards",
+    "url": "/1",
+    "image": "/images/2.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Amoura",
+    "url": "/2",
+    "image": "/images/Amoura.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Aracha",
+    "url": "/3",
+    "image": "/images/Aracha.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Borut",
+    "url": "/4",
+    "image": "/images/Borut.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Gideon I",
+    "url": "/5",
+    "image": "/images/Gideon I.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Gideon II",
+    "url": "/6",
+    "image": "/images/Gideon II.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Jwala",
+    "url": "/7",
+    "image": "/images/Jwala.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Kyst",
+    "url": "/8",
+    "image": "/images/Kyst.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Maverick",
+    "url": "/9",
+    "image": "/images/Maverick.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Minos",
+    "url": "/10",
+    "image": "/images/Minos.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Noctune",
+    "url": "/11",
+    "image": "/images/Noctune.jpg"
+  },
+  {
+    "id": 12,
+    "name": "RAPTHADOR",
+    "url": "/12",
+    "image": "/images/RAPTHADOR.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Raster",
+    "url": "/13",
+    "image": "/images/Raster.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Rex",
+    "url": "/14",
+    "image": "/images/Rex.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Tinjri",
+    "url": "/15",
+    "image": "/images/Tinjri.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Tsushima",
+    "url": "/16",
+    "image": "/images/Tsushima.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Zamu I",
+    "url": "/17",
+    "image": "/images/Zamu I.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Zamu II",
+    "url": "/18",
+    "image": "/images/Zamu II.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Zamu III",
+    "url": "/19",
+    "image": "/images/Zamu III.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Zhi Yan",
+    "url": "/20",
+    "image": "/images/Zhi Yan.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Zhirthi",
+    "url": "/21",
+    "image": "/images/Zhirthi.jpg"
+  }
+]
