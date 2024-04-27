@@ -21,7 +21,7 @@ export const app = new Frog({
 
 app.use('/*', serveStatic({root: './public'}))
 
-app.frame('/lore', (c) => {
+app.frame('/', (c) => {
     const {buttonValue,status} = c
 
     const lorePage = buttonValue ?
@@ -30,7 +30,7 @@ app.frame('/lore', (c) => {
 
     if (!lorePage) {
         return c.res({
-            action: '/lore',
+            action: '/',
             image: (<div> something went wrong! This is so broken!</div>),
             intents: [],
         })
@@ -38,7 +38,7 @@ app.frame('/lore', (c) => {
     else{
         const currentPageIndex = loreData.indexOf(lorePage)
         //the request's url + the lore page's image url
-        const pageImageUrl = `https://frames.chaincade.com${lorePage.image}`
+        const pageImageUrl = `https://frames.chaincade.com/${lorePage.image}`
 
         //find the lore page in the loreData array
         const index = loreData.indexOf(lorePage)
@@ -65,7 +65,7 @@ app.frame('/lore', (c) => {
         }
 
         return c.res({
-            action: `/lore`,
+            action: `/`,
             image: (pageImageUrl),
             intents: [
                 status != 'response' && <Button value={latestPage.name}>Latest : {latestPage.name}</Button>,
