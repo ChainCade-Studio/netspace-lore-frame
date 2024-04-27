@@ -15,12 +15,13 @@ import loreData from "./lore.json";
 export const app = new Frog({
     // Supply a Hub to enable frame verification.
     verify: "silent",
+    basePath: '/lore',
     // hub: neynar({ apiKey: NEYNAR_API_KEY }),
 })
 
 app.use('/*', serveStatic({root: './public'}))
 
-app.frame('/', (c) => {
+app.frame('/lore', (c) => {
     const {buttonValue,status} = c
 
     const lorePage = buttonValue ?
@@ -29,7 +30,7 @@ app.frame('/', (c) => {
 
     if (!lorePage) {
         return c.res({
-            action: '/',
+            action: '/lore',
             image: (<div> something went wrong! This is so broken!</div>),
             intents: [],
         })
@@ -37,7 +38,7 @@ app.frame('/', (c) => {
     else{
         const currentPageIndex = loreData.indexOf(lorePage)
         //the request's url + the lore page's image url
-        const pageImageUrl = `${c.url}${lorePage.image}`
+        const pageImageUrl = `https://frames.chaincade.com${lorePage.image}`
 
         //find the lore page in the loreData array
         const index = loreData.indexOf(lorePage)
@@ -64,13 +65,13 @@ app.frame('/', (c) => {
         }
 
         return c.res({
-            action: `/`,
+            action: `/lore`,
             image: (pageImageUrl),
             intents: [
                 status != 'response' && <Button value={latestPage.name}>Latest : {latestPage.name}</Button>,
                 status === 'response' && currentPageIndex == 1 && <Button.Reset>Home</Button.Reset>,
-                status === 'response' && currentPageIndex > 1 &&<Button value={`${prevPage.name}`}>{prevPage.name}</Button>,
-                currentPageIndex < loreData.length-1 && <Button value={`${nextPage.name}`}>{nextPage.name}</Button>,
+                status === 'response' && currentPageIndex > 1 &&<Button value={`${prevPage.name}`}>&larr; {prevPage.name}</Button>,
+                currentPageIndex < loreData.length-1 && <Button value={`${nextPage.name}`}>{nextPage.name} &rarr;</Button>,
                 status === 'response' && currentPageIndex == loreData.length-1 && <Button.Reset>Home</Button.Reset>,
                 status === 'response' && currentPageIndex == loreData.length-1 && <Button.Link href={"https://warpcast.com/~/channel/xd"}>Join XD</Button.Link>
             ],
